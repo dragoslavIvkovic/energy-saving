@@ -53,9 +53,10 @@ export default function Compare() {
     }
 
     // e.target.reset();
-    hoursPerDayRef.current.value = "";
+   hoursPerDayRef.current.value = ""
+    
     devicePriceRef.current.value = "";
-    energyConsumptionRef.current.value = "";
+     energyConsumptionRef.current.value = "";
     daysPerMonthRef.current.value = "";
     deviceNameRef.current.value = "";
   };
