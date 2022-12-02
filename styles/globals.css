@@ -25,10 +25,20 @@ body {
   font-size: 1rem;
   overflow: hidden;
   scrollbar-width: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .MuiInputBase-root {
   background: var(--backgroundSecond-color);
+  width: 7vw;
+  height: 6vh;
+}
+.MuiButton-root {
+  width: 7vw;
+  height: 6vh;
+  background: var(--annotations-color);
 }
 .MuiInputBase-root:hover {
   background: var(--annotations-color);
@@ -44,6 +54,19 @@ body {
 .MuiSlider-root {
   background: var(--background-color);
 }
+
+.MuiSvgIcon-root {
+  color: var(--backgroundSecond-color);
+  font-size: 1vw;
+}
+
+.MuiTabPanel-root {
+  margin-top: 1vh;
+}
+
+/* .MuiFormControl-root{
+  width: 10vw;
+} */
 
 /* .Mui-TableHeadCell-Content {
   background: red;
@@ -72,3 +95,4 @@ th:first-child {
 .MuiTableCell-root {
   border: none;
 }
+

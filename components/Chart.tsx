@@ -11,7 +11,9 @@ import {
 import { useSelector } from "react-redux";
 
 export default function Chart() {
-  const listData = useSelector((state) => state.calculation.list);
+  const listData = useSelector((state) => state.compare.list);
+
+
   const data = listData.map((datas) => datas);
 
   return (
@@ -32,7 +34,7 @@ export default function Chart() {
       <Tooltip />
       <Legend />
       <Bar dataKey="devicePrice" stackId="a" fill="#8884d8" />
-      <Bar dataKey="priceSum" stackId="a" fill="#82ca9d" />
+      <Bar dataKey="sum" stackId="a" fill="#82ca9d" />
     </BarChart>
   );
 }
