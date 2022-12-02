@@ -1,0 +1,74 @@
+:root {
+  /* --background-color: #184e5e; */
+  --background-color: #004953;
+  --backgroundSecond-color: #14667a;
+  /* --backGroundMuted-color: #1d4e60; */
+  --text-color: #fefefe;
+
+  --disabled-color: #3c6671;
+  --annotations-color: #f5a519;
+  --active-color: #05b7fb;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  /* color: var(--active-color); */
+  background: var(--background-color);
+  font-size: 1rem;
+  overflow: hidden;
+  scrollbar-width: none;
+}
+
+.MuiInputBase-root {
+  background: var(--backgroundSecond-color);
+}
+.MuiInputBase-root:hover {
+  background: var(--annotations-color);
+}
+.MuiToolbar-root {
+  background: var(--background-color);
+}
+
+.MuiTableRow-root,
+.MuiPaper-root {
+  background: var(--background-color);
+}
+.MuiSlider-root {
+  background: var(--background-color);
+}
+
+/* .Mui-TableHeadCell-Content {
+  background: red;
+}
+.MuiTableCell-root {
+  color: green;
+  background: #f5a519;
+} */
+
+/* th {
+  text-transform: uppercase;
+  text-align: right;
+  justify-content: center;
+  color: white;
+}
+
+.Mui-TableHeadCell-Content {
+  width: max-content;
+  padding: 0;
+  margin: 0;
+} */
+th:first-child {
+  width: 5px;
+}
+
+.MuiTableCell-root {
+  border: none;
+}

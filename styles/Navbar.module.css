@@ -1,0 +1,56 @@
+@import "variables/colors";
+.navbar {
+  position: absolute;
+  z-index: 2;
+  right: 7vw;
+  top: 50%;
+  height: 10vh;
+  padding: 0.5rem;
+  border-radius: 3rem;
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $backGroundEl-color;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* .navbarButton {
+  border: 0;
+  width: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+.navbarButtonActive {
+  border: 0;
+  width: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  fill: black;
+  stroke: yellow;
+  margin-bottom: 2em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+} */
