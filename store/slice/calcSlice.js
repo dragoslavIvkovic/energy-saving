@@ -5,7 +5,7 @@ export const calcSlice = createSlice({
   initialState: {
     powerConsumption: 0,
     list: [],
-    price: null,
+    energyPrice: null,
   },
 
   reducers: {
@@ -13,7 +13,7 @@ export const calcSlice = createSlice({
       state.powerConsumption += action.payload;
     },
     addPrice: (state, action) => {
-      state.price = action.payload;
+      state.energyPrice = action.payload;
     },
     addList: (state, action) => {
       // if (!state.list.map((el) => el.id).includes(action.payload.id)) {
