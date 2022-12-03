@@ -22,7 +22,7 @@ body {
   margin: 0;
   /* color: var(--active-color); */
   background: var(--background-color);
-  font-size: 1rem;
+  font-size: calc(10px + 0.390625vw);
   overflow: hidden;
   scrollbar-width: none;
   display: flex;
@@ -32,27 +32,24 @@ body {
 
 .MuiInputBase-root {
   background: var(--backgroundSecond-color);
-  width: 7vw;
-  height: 6vh;
-}
-.MuiButton-root {
-  width: 7vw;
-  height: 6vh;
-  background: var(--annotations-color);
-}
-.MuiInputBase-root:hover {
-  background: var(--annotations-color);
-}
-.MuiToolbar-root {
-  background: var(--background-color);
+  width: 7.5rem;
 }
 
-.MuiTableRow-root,
-.MuiPaper-root {
-  background: var(--background-color);
+.MuiButton-root {
+  width: 7.5rem;
+  background: var(--annotations-color);
 }
-.MuiSlider-root {
-  background: var(--background-color);
+
+.MuiInputLabel-root {
+  color: var(--background-color);
+}
+.MuiInputLabel-formControl {
+  color: var(--annotations-color);
+  font-size: 0.9rem;
+}
+
+.Mui-focused:hover {
+  background: var(--annotations-color);
 }
 
 .MuiSvgIcon-root {
@@ -61,38 +58,37 @@ body {
 }
 
 .MuiTabPanel-root {
-  margin-top: 1vh;
+  margin-top: 2vh;
+  padding: 1vh 0;
+  /* width: 70vw; */
 }
 
-/* .MuiFormControl-root{
-  width: 10vw;
+/* .MuiInputLabel-root {
+  font-size: 1rem;
 } */
 
-/* .Mui-TableHeadCell-Content {
-  background: red;
-}
-.MuiTableCell-root {
-  color: green;
-  background: #f5a519;
-} */
-
-/* th {
-  text-transform: uppercase;
-  text-align: right;
+.MuiTabs-flexContainer {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  color: white;
 }
 
-.Mui-TableHeadCell-Content {
-  width: max-content;
-  padding: 0;
-  margin: 0;
+.MuiDataGrid-root {
+  overflow: hidden;
+  color: #538b99;
+  border-color: #538b99;
+}
+
+.MuiButton-root {
+  color: var(--backgroundSecond-color);
+  background-color: var(--annotations-color);
+  font-weight: 700;
+}
+
+/* .MuiDataGrid-main{
+  border-color: #3c6671;
 } */
-th:first-child {
-  width: 5px;
-}
 
-.MuiTableCell-root {
-  border: none;
-}
-
+/* .MuiOutlinedInput-input{
+  font-size: 0.8rem;
+} */

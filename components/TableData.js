@@ -3,60 +3,59 @@ import Box from "@mui/material/Box";
 import { DataGrid } from "@mui/x-data-grid";
 import { useSelector } from "react-redux";
 import * as XLSX from "xlsx";
-
+import { Button } from "@mui/material";
+import { removeList } from "../store/slice/calcSlice";
 
 
 
 const columns = [
   {
     field: "deviceName",
-    headerName: "deviceName",
-    width: 150,
+    headerName: " device name",
+    width: 110,
     editable: true,
   },
   {
     field: "energyPrice",
-    headerName: "energyPrice",
-    width: 150,
+    headerName: " energy price",
+    width: 110,
     editable: true,
   },
-  
+
+  {
+    field: "hoursPerDay",
+    headerName: " hours per day",
+    type: "number",
+    width: 110,
+    editable: true,
+  },
   {
     field: "daysPerMonth",
-    headerName: "daysPerMonth",
+    headerName: " days in month",
+    type: "number",
+    width: 110,
+    editable: true,
+  },
+  {
+    field: "energyConsumption",
+    headerName: " energy consumption",
     type: "number",
     width: 110,
     editable: true,
   },
   {
     field: "energySum",
-    headerName: "energySum",
-    type: "number",
-    width: 110,
-    editable: true,
-  },
-  {
-    field: "priceSum",
-    headerName: "priceSum",
-    type: "number",
-    width: 110,
-    editable: true,
-  },
-  {
-    field: "hoursPerDay",
-    headerName: "hoursPerDay",
-    description: "This column has a value getter and is not sortable.",
+    headerName: " energy sum",
     sortable: false,
-    width: 160,
+    width: 110,
     valueGetter: (params) =>
       `${params.row.hoursPerDay || ""} ${params.row.hoursPerDay || ""}`,
   },
   {
-    field: "sum",
-    headerName: "sum",
-    description: "This column has a value getter and is not sortable.",
-    sortable: false,
-    width: 160,
+    field: "priceSum",
+    headerName: " price sum",
+     sortable: false,
+    width: 110,
     valueGetter: (params) =>
       `${params.row.hoursPerDay || ""} ${params.row.hoursPerDay || ""}`,
   },
@@ -79,13 +78,27 @@ const downloadExcel = () => {
   
   return (
     <Box sx={{ height: 400, width: "100%" }}>
-      <button onClick={() => downloadExcel()}>Download As Excel</button>
+      <Button
+        sx={{ width: "7vw", fontSize: "10px" }}
+        variant="contained"
+        size="small"
+        onClick={() => downloadExcel()}
+      >
+        Download Data
+      </Button>
       <DataGrid
+        sx={{
+          
+          ".MuiDataGrid-columnSeparator": {
+            display: "none",
+          },
+        }}
         rows={listData}
         columns={columns}
         pageSize={5}
         rowsPerPageOptions={[5]}
         checkboxSelection
+        
         disableSelectionOnClick
         experimentalFeatures={{ newEditingApi: true }}
       />

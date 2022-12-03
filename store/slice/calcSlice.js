@@ -21,11 +21,18 @@ export const calcSlice = createSlice({
       // }
       // state.list.push(action.payload);
     },
+    removeList: (state, action) => {
+      const { id } = action.payload; 
+      state.list = state.list.filter((item) => item.id !== id);
+      // }
+      // state.list.push(action.payload);
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { addPowerConsumption, addList, addPrice } = calcSlice.actions;
+export const { addPowerConsumption, addList, addPrice, removeList } =
+  calcSlice.actions;
 export const selectorCalc = (state) => state.calculation;
 
 export default calcSlice.reducer;

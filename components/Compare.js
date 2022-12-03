@@ -68,45 +68,56 @@ export default function Compare() {
 
   return (
     <Grid sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2} marginBottom={2} alignItems="center">
+      <Grid
+        container
+        direction="row"
+        alignItems="center"
+        justifyContent="center"
+        sx={{ marginBottom: 3 }}
+      >
         <TextField
           inputRef={deviceNameRef}
           type="text"
           id="outlined-basic"
           label="device name"
           variant="outlined"
+          size="small"
         />
         <DoubleArrowIcon />
         <TextField
           inputRef={devicePriceRef}
           type="number"
           id="outlined-basic"
-          label="device energyPrice"
+          label="energy price"
           variant="outlined"
+          size="small"
         />
         <DoubleArrowIcon />
         <TextField
           inputRef={energyConsumptionRef}
           type="number"
           id="outlined-basic"
-          label="energy consumption"
+          label="kwh"
           variant="outlined"
+          size="small"
         />
         <DoubleArrowIcon />
         <TextField
           inputRef={energyPriceRef}
           type="number"
           id="outlined-basic"
-          label="energy energyPrice"
+          label="energy price"
           variant="outlined"
+          size="small"
         />
         <DoubleArrowIcon />
         <TextField
           inputRef={hoursPerDayRef}
           type="number"
           id="outlined-basic"
-          label="hoursPerDay per day"
+          label="hours per day"
           variant="outlined"
+          size="small"
           value={hourValue}
           inputProps={{ minHours, maxHours }}
           onChange={(e) => {
@@ -121,8 +132,9 @@ export default function Compare() {
           inputRef={daysPerMonthRef}
           type="number"
           id="outlined-basic"
-          label="days per month"
+          label="days in month"
           variant="outlined"
+          size="small"
           value={daysPerMonthValue}
           inputProps={{ minDays, maxDays }}
           onChange={(e) => {

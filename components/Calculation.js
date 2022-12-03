@@ -9,6 +9,8 @@ import {
   addPrice,
 } from "../store/slice/calcSlice";
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
+import Tooltip from "@mui/material/Tooltip";
+
 import { v4 as uuidv4 } from "uuid";
 import dynamic from "next/dynamic";
 
@@ -63,37 +65,49 @@ export default function Calculation() {
 
   return (
     <Grid sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2} marginBottom={2} alignItems="center">
-        <TextField
-          inputRef={deviceNameRef}
-          type="text"
-          id="outlined-basic"
-          label="device name"
-          variant="outlined"
-        />
+      <Grid
+        container
+        direction="row"
+        alignItems="center"
+        justifyContent="center"
+        sx={{ marginBottom: 3 }}
+      >
+        <Tooltip title="info o tome">
+          <TextField
+            inputRef={deviceNameRef}
+            type="text"
+            id="outlined-helperText"
+            label="device name"
+            variant="outlined"
+            size="small"
+          />
+        </Tooltip>
         <DoubleArrowIcon />
         <TextField
           inputRef={energyPriceRef}
           type="number"
           id="outlined-basic"
-          label="energy energyPrice"
+          label="energy price"
           variant="outlined"
+          size="small"
         />
         <DoubleArrowIcon />
         <TextField
           inputRef={energyConsumptionRef}
           type="number"
           id="outlined-basic"
-          label="energy consumption"
+          label="kwh"
           variant="outlined"
+          size="small"
         />
         <DoubleArrowIcon />
         <TextField
           inputRef={hoursPerDayRef}
           type="number"
           id="outlined-basic"
-          label="hoursPerDay per day"
+          label="hours per day"
           variant="outlined"
+          size="small"
           value={hourValue}
           inputProps={{ minHours, maxHours }}
           onChange={(e) => {
@@ -108,8 +122,9 @@ export default function Calculation() {
           inputRef={daysPerMonthRef}
           type="number"
           id="outlined-basic"
-          label="days per month"
+          label="days in month"
           variant="outlined"
+          size="small"
           value={daysPerMonthValue}
           inputProps={{ minDays, maxDays }}
           onChange={(e) => {

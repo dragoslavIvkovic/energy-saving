@@ -15,8 +15,8 @@ export default function Tabs() {
 
   return (
     <Box sx={{ width: "100%" }}>
-      <TabContext value={selectedTab}>
-        <TabList onChange={handleChange}>
+      <TabContext value={selectedTab} >
+        <TabList onChange={handleChange} >
           <Tab label="Calculation" value="1"></Tab>
           <Tab label="Compare" value="2"></Tab>
           <Tab label="Closable" value="3"></Tab>
