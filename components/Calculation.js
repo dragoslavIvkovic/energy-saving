@@ -58,10 +58,10 @@ export default function Calculation() {
     deviceNameRef.current.value = "";
   };
 
-  const minHours = 1;
-  const maxHours = 24;
-  const minDays = 1;
-  const maxDays = 30;
+  const minhours = 1;
+  const maxhours = 24;
+  const mindays = 1;
+  const maxdays = 30;
 
   return (
     <Grid sx={{ flexGrow: 1 }}>
@@ -88,7 +88,6 @@ export default function Calculation() {
             inputRef={energyPriceRef}
             type="number"
             id="outlined-basic"
-           
             label="energy price"
             variant="outlined"
             size="small"
@@ -114,12 +113,12 @@ export default function Calculation() {
             label="hours per day"
             variant="outlined"
             size="small"
-            value={hourValue}
-            inputProps={{ minHours, maxHours }}
+            value={hourValue || ''}
+            inputProps={{ minhours, maxhours }}
             onChange={(e) => {
               var value = parseInt(e.target.value);
-              if (value > maxHours) value = maxHours;
-              if (value < minHours) value = minHours;
+              if (value > maxhours) value = maxhours;
+              if (value < minhours) value = minhours;
               setHoursValue(value);
             }}
           />
@@ -133,12 +132,12 @@ export default function Calculation() {
             label="days in month"
             variant="outlined"
             size="small"
-            value={daysPerMonthValue}
-            inputProps={{ minDays, maxDays }}
+            value={daysPerMonthValue || ''}
+            inputProps={{ mindays, maxdays }}
             onChange={(e) => {
               var value = parseInt(e.target.value);
-              if (value > maxDays) value = maxDays;
-              if (value < minDays) value = minDays;
+              if (value > maxdays) value = maxdays;
+              if (value < mindays) value = mindays;
               setDaysPerMonthValue(value);
             }}
           />

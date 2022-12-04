@@ -13,7 +13,6 @@ import { useSelector } from "react-redux";
 export default function Chart() {
   const listData = useSelector((state) => state.compare.list);
 
-
   const data = listData.map((datas) => datas);
 
   return (
@@ -29,7 +28,7 @@ export default function Chart() {
       }}
     >
       <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="name" />
+      <XAxis dataKey="deviceName" />
       <YAxis />
       <Tooltip />
       <Legend />
