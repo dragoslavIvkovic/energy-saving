@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import React, { useEffect, useRef, useState } from "react";
-import { Button, Grid, TextField } from "@mui/material";
+import { Button, Grid, TextField, Tooltip } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
 import { addListCompare } from "../store/slice/compareSlice";
 import { v4 as uuidv4 } from "uuid";
@@ -75,78 +75,92 @@ export default function Compare() {
         justifyContent="center"
         sx={{ marginBottom: 3 }}
       >
-        <TextField
-          inputRef={deviceNameRef}
-          type="text"
-          id="outlined-basic"
-          label="device name"
-          variant="outlined"
-          size="small"
-        />
+        <Tooltip title="enter the name of the device">
+          <TextField
+            inputRef={deviceNameRef}
+            type="text"
+            id="outlined-helperText"
+            label="device name"
+            variant="outlined"
+            size="small"
+          />
+        </Tooltip>
         <DoubleArrowIcon />
-        <TextField
-          inputRef={devicePriceRef}
-          type="number"
-          id="outlined-basic"
-          label="energy price"
-          variant="outlined"
-          size="small"
-        />
+        <Tooltip title="enter the purchase price of the device">
+          <TextField
+            inputRef={devicePriceRef}
+            type="number"
+            id="outlined-basic"
+            label="device price"
+            variant="outlined"
+            size="small"
+          />
+        </Tooltip>
         <DoubleArrowIcon />
-        <TextField
-          inputRef={energyConsumptionRef}
-          type="number"
-          id="outlined-basic"
-          label="kwh"
-          variant="outlined"
-          size="small"
-        />
+        <Tooltip title="enter the price of electricity">
+          <TextField
+            inputRef={energyPriceRef}
+            type="number"
+            id="outlined-basic"
+            label="energy price"
+            variant="outlined"
+            size="small"
+          />
+        </Tooltip>
         <DoubleArrowIcon />
-        <TextField
-          inputRef={energyPriceRef}
-          type="number"
-          id="outlined-basic"
-          label="energy price"
-          variant="outlined"
-          size="small"
-        />
+        <Tooltip title="enter how much electricity the device consumes">
+          <TextField
+            inputRef={energyConsumptionRef}
+            type="number"
+            id="outlined-basic"
+            label="kwh"
+            variant="outlined"
+            size="small"
+          />
+        </Tooltip>
         <DoubleArrowIcon />
-        <TextField
-          inputRef={hoursPerDayRef}
-          type="number"
-          id="outlined-basic"
-          label="hours per day"
-          variant="outlined"
-          size="small"
-          value={hourValue}
-          inputProps={{ minHours, maxHours }}
-          onChange={(e) => {
-            var value = parseInt(e.target.value);
-            if (value > maxHours) value = maxHours;
-            if (value < minHours) value = minHours;
-            setHoursValue(value);
-          }}
-        />
+        <Tooltip title="enter how many hours the electrical device operates in a day">
+          <TextField
+            inputRef={hoursPerDayRef}
+            type="number"
+            id="outlined-basic"
+            label="hours per day"
+            variant="outlined"
+            size="small"
+            value={hourValue}
+            inputProps={{ minHours, maxHours }}
+            onChange={(e) => {
+              var value = parseInt(e.target.value);
+              if (value > maxHours) value = maxHours;
+              if (value < minHours) value = minHours;
+              setHoursValue(value);
+            }}
+          />
+        </Tooltip>
         <DoubleArrowIcon />
-        <TextField
-          inputRef={daysPerMonthRef}
-          type="number"
-          id="outlined-basic"
-          label="days in month"
-          variant="outlined"
-          size="small"
-          value={daysPerMonthValue}
-          inputProps={{ minDays, maxDays }}
-          onChange={(e) => {
-            var value = parseInt(e.target.value);
-            if (value > maxDays) value = maxDays;
-            if (value < minDays) value = minDays;
-            setDaysPerMonthValue(value);
-          }}
-        />
+        <Tooltip title="enter how many days the electrical appliance operates in a month">
+          <TextField
+            inputRef={daysPerMonthRef}
+            type="number"
+            id="outlined-basic"
+            label="days in month"
+            variant="outlined"
+            size="small"
+            value={daysPerMonthValue}
+            inputProps={{ minDays, maxDays }}
+            onChange={(e) => {
+              var value = parseInt(e.target.value);
+              if (value > maxDays) value = maxDays;
+              if (value < minDays) value = minDays;
+              setDaysPerMonthValue(value);
+            }}
+          />
+        </Tooltip>
         <DoubleArrowIcon />
+
         <Button onClick={onSubmit}>Submit</Button>
       </Grid>
+
       <Grid
         container
         direction="column"

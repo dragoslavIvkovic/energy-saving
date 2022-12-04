@@ -1,7 +1,7 @@
 :root {
-  /* --background-color: #184e5e; */
-  --background-color: #004953;
-  --backgroundSecond-color: #14667a;
+  /* --bg-color: #184e5e; */
+  --bg-color: #004953;
+  --bg2-color: #14667a;
   /* --backGroundMuted-color: #1d4e60; */
   --text-color: #fefefe;
 
@@ -21,7 +21,7 @@ body {
   padding: 0;
   margin: 0;
   /* color: var(--active-color); */
-  background: var(--background-color);
+  background: var(--bg-color);
   font-size: calc(10px + 0.390625vw);
   overflow: hidden;
   scrollbar-width: none;
@@ -31,7 +31,7 @@ body {
 }
 
 .MuiInputBase-root {
-  background: var(--backgroundSecond-color);
+  background: var(--bg2-color);
   width: 7.5rem;
 }
 
@@ -41,11 +41,16 @@ body {
 }
 
 .MuiInputLabel-root {
-  color: var(--background-color);
+  color: var(--bg-color);
 }
-.MuiInputLabel-formControl {
+/* .MuiInputLabel-formControl {
   color: var(--annotations-color);
   font-size: 0.9rem;
+} */
+
+.MuiInputLabel-shrink {
+   color: var(--annotations-color);
+   margin-top: -10px;
 }
 
 .Mui-focused:hover {
@@ -53,7 +58,7 @@ body {
 }
 
 .MuiSvgIcon-root {
-  color: var(--backgroundSecond-color);
+  color: var(--bg2-color);
   font-size: 1vw;
 }
 
@@ -80,10 +85,22 @@ body {
 }
 
 .MuiButton-root {
-  color: var(--backgroundSecond-color);
+  color: var(--bg2-color);
   background-color: var(--annotations-color);
   font-weight: 700;
 }
+
+.MuiTooltip-tooltip{
+  background-color: var(--bg2-color);
+  color: var(--bg-color);
+ 
+  font-size:medium;
+  font-weight: 700;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+
+
 
 /* .MuiDataGrid-main{
   border-color: #3c6671;

@@ -77,9 +77,9 @@ const downloadExcel = () => {
 
   
   return (
-    <Box sx={{ height: 400, width: "100%" }}>
+    <Box sx={{ height: 400, width: "100%" , margin: "0 0 2vh 0"}}>
       <Button
-        sx={{ width: "7vw", fontSize: "10px" }}
+        sx={{ width: "7vw", fontSize: "10px", marginBottom:"2vh" }}
         variant="contained"
         size="small"
         onClick={() => downloadExcel()}
