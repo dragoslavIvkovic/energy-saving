@@ -8,11 +8,8 @@ import dynamic from 'next/dynamic';
 import {
   addList,
 } from '../../store/slice/calcSlice';
-
-// const Chart = dynamic(() => import("../components/Chart"), { ssr: false });
-const TableData = dynamic(() => import('./TableData'), {
-  ssr: false,
-});
+import TableData from './TableData';
+ 
 
 export default function Calculation() {
   const [hourValue, setHoursValue] = useState();

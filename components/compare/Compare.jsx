@@ -5,8 +5,8 @@ import { v4 as uuidv4 } from "uuid";
 import dynamic from "next/dynamic";
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 import { addListCompare } from "../../store/slice/compareSlice";
+import Chart from "./Chart";
 
-const Chart = dynamic(() => import("./Chart.jsx"), { ssr: false });
 
 export default function Compare() {
   const [hourValue, setHoursValue] = useState();
