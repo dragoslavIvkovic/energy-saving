@@ -3,14 +3,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Button, Grid, TextField, Tooltip } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
-import { addListCompare } from "../store/slice/compareSlice";
+import { addListCompare } from "../../store/slice/compareSlice";
 import { v4 as uuidv4 } from "uuid";
 import dynamic from "next/dynamic";
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
-const Chart = dynamic(() => import("../components/Chart"), { ssr: false });
-const TableData = dynamic(() => import("../components/TableData"), {
-  ssr: false,
-});
+const Chart = dynamic(() => import("../compare/Chart.tsx"), { ssr: false });
+ 
 
 export default function Compare() {
   const [hourValue, setHoursValue] = useState();

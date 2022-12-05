@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import { Tab } from "@mui/material";
 import { TabList, TabContext, TabPanel } from "@mui/lab";
 import Box from "@mui/material/Box";
-import Calculation from "./Calculation";
-import Compare from "./Compare";
+import Calculation from "./calculation/Calculation";
+import Compare from "./compare/Compare";
 
 export default function Tabs() {
   const [selectedTab, setSelectedTab] = useState("1");

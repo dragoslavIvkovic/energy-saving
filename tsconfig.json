@@ -25,7 +25,7 @@
     "**/*.tsx",
     "pages/Hero.js",
     "pages/Appliances.js",
-    "components/TableData.js"
+    "components/calculation/TableData.js"
   ],
   "exclude": ["node_modules"]
 }

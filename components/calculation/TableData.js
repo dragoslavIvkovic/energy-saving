@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import * as XLSX from "xlsx";
 import { Button } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
-import { removeList } from "../store/slice/calcSlice";
+import { removeList } from "../../store/slice/calcSlice";
 import DeleteIcon from "@mui/icons-material/Delete";
 
 export default function TableData() {

@@ -7,15 +7,15 @@ import {
   addPowerConsumption,
   addList,
   addPrice,
-} from "../store/slice/calcSlice";
+} from "../../store/slice/calcSlice";
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 import Tooltip from "@mui/material/Tooltip";
 
 import { v4 as uuidv4 } from "uuid";
 import dynamic from "next/dynamic";
 
-const Chart = dynamic(() => import("../components/Chart"), { ssr: false });
-const TableData = dynamic(() => import("../components/TableData"), {
+// const Chart = dynamic(() => import("../components/Chart"), { ssr: false });
+const TableData = dynamic(() => import("../calculation/TableData"), {
   ssr: false,
 });
 
