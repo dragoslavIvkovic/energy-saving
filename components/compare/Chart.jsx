@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   BarChart,
   Bar,
@@ -7,14 +7,13 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-} from 'recharts';
-import { useSelector } from 'react-redux';
+} from "recharts";
+import { useSelector } from "react-redux";
 
 export default function Chart() {
   const listData = useSelector((state) => state.compare.list);
 
   const data = listData.map((datas) => datas);
-  
 
   return (
     <>

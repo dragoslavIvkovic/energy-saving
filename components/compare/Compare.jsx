@@ -1,14 +1,12 @@
-import React, { useRef, useState } from 'react';
-import {
-  Button, Grid, TextField, Tooltip,
-} from '@mui/material';
-import { useDispatch } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
-import dynamic from 'next/dynamic';
-import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
-import { addListCompare } from '../../store/slice/compareSlice';
+import React, { useRef, useState } from "react";
+import { Button, Grid, TextField, Tooltip } from "@mui/material";
+import { useDispatch } from "react-redux";
+import { v4 as uuidv4 } from "uuid";
+import dynamic from "next/dynamic";
+import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
+import { addListCompare } from "../../store/slice/compareSlice";
 
-const Chart = dynamic(() => import('./Chart.jsx'), { ssr: false });
+const Chart = dynamic(() => import("./Chart.jsx"), { ssr: false });
 
 export default function Compare() {
   const [hourValue, setHoursValue] = useState();
@@ -19,7 +17,7 @@ export default function Compare() {
   const hoursPerDayRef = useRef(null);
   const daysPerMonthRef = useRef(null);
   const energyConsumptionRef = useRef(null);
-  const deviceNameRef = useRef('');
+  const deviceNameRef = useRef("");
 
   const onSubmit = () => {
     const hoursPerDay = hoursPerDayRef.current.value;
@@ -28,9 +26,9 @@ export default function Compare() {
     const energyConsumption = energyConsumptionRef.current.value;
     const daysPerMonth = daysPerMonthRef.current.value;
     const deviceName = deviceNameRef.current.value;
-    const energySum = Number(energyConsumption * hoursPerDay * daysPerMonth).toFixed(
-      2
-    );
+    const energySum = Number(
+      energyConsumption * hoursPerDay * daysPerMonth
+    ).toFixed(2);
     const priceSum = Number(
       energyConsumption * energyPrice * (hoursPerDay * daysPerMonth)
     ).toFixed(2);
@@ -39,10 +37,10 @@ export default function Compare() {
     const yearlyPriceOfEnergyUsed = Number(
       monthlyPriceOfEnergyUsed * 12
     ).toFixed(2);
-    const yearlySum = (Number(devicePrice) + Number(yearlyPriceOfEnergyUsed)).toFixed(2);
-    
-     
-    
+    const yearlySum = (
+      Number(devicePrice) + Number(yearlyPriceOfEnergyUsed)
+    ).toFixed(2);
+
     const dataListObject = {
       id: uuidv4(),
       deviceName,
@@ -62,11 +60,11 @@ export default function Compare() {
     if (deviceName) {
       dispatch(addListCompare(dataListObject));
     }
-    hoursPerDayRef.current.value = '';
-    devicePriceRef.current.value = '';
-    energyConsumptionRef.current.value = '';
-    daysPerMonthRef.current.value = '';
-    deviceNameRef.current.value = '';
+    hoursPerDayRef.current.value = "";
+    devicePriceRef.current.value = "";
+    energyConsumptionRef.current.value = "";
+    daysPerMonthRef.current.value = "";
+    deviceNameRef.current.value = "";
   };
 
   const minhours = 1;
@@ -135,7 +133,7 @@ export default function Compare() {
             label="hours per day"
             variant="outlined"
             size="small"
-            value={hourValue || ''}
+            value={hourValue || ""}
             inputProps={{ minhours, maxhours }}
             onChange={(e) => {
               let value = parseInt(e.target.value, 10);
@@ -154,7 +152,7 @@ export default function Compare() {
             label="days in month"
             variant="outlined"
             size="small"
-            value={daysPerMonthValue || ''}
+            value={daysPerMonthValue || ""}
             inputProps={{ mindays, maxdays }}
             onChange={(e) => {
               let value = parseInt(e.target.value, 10);
