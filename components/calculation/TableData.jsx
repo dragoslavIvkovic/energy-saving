@@ -65,37 +65,40 @@ export default function TableData() {
         Download Data
       </Button>
 
-      {!isObjectEmpty &&
+      {!isObjectEmpty && (
         <table>
-        <thead>
-          <tr>
-            <th>device</th>
-            <th>energy price</th>
-            <th>hours per day</th>
-            <th>days per month</th>
-            <th>kwh</th>
-            <th>energy Sum</th>
-            <th>€</th>
-            <th>remove</th>
-          </tr>
-        </thead>
-        <tbody>
-          {listData.map((row) => (
-            <tr key={row.id}>
-              <td>{row.deviceName}</td>
-              <td>{row.energyPrice}</td>
-              <td>{row.hoursPerDay}</td>
-              <td>{row.daysPerMonth}</td>
-              <td>{row.energyConsumption}</td>
-              <td>{row.energySum}</td>
-              <td>{row.priceSum}</td>
-              <td onClick={() => RemoveRow(row.id)}>
-                <DeleteIcon />
-              </td>
+          <thead>
+            <tr>
+              <th>device</th>
+              <th>energy price</th>
+              <th>hours per day</th>
+              <th>days per month</th>
+              <th>kwh</th>
+              <th>energy Sum</th>
+              <th>€/monthly</th>
+              <th>€/yearly</th>
+              <th>remove</th>
             </tr>
-          ))}
-        </tbody>
-      </table>}
+          </thead>
+          <tbody>
+            {listData.map((row) => (
+              <tr key={row.id}>
+                <td>{row.deviceName}</td>
+                <td>{row.energyPrice}</td>
+                <td>{row.hoursPerDay}</td>
+                <td>{row.daysPerMonth}</td>
+                <td>{row.energyConsumption}</td>
+                <td>{row.energySum}</td>
+                <td>{row.priceSum}</td>
+                <td>{row.monthlyPriceOfEnergyUsed}</td>
+                <td onClick={() => RemoveRow(row.id)}>
+                  <DeleteIcon />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
     </Box>
   );
 }

@@ -1,11 +1,11 @@
-import type { NextPage } from "next";
+ 
 import { useRouter } from "next/router";
 import Head from "next/head";
 
 import BasicTabs from "../components/BasicTabs";
 import styles from "../styles/Home.module.css";
 
-const Home: NextPage = () => {
+const Home = () => {
   const router = useRouter();
 
   console.log(router.locale);
