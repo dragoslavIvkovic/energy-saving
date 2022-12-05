@@ -1,10 +1,8 @@
 :root {
-  /* --background-color: #184e5e; */
-  --background-color: #004953;
-  --backgroundSecond-color: #14667a;
-  /* --backGroundMuted-color: #1d4e60; */
+  --bg-color: #004953;
+  --bg2-color: #14667a;
   --text-color: #fefefe;
-
+  --text2-color: #538b99;
   --disabled-color: #3c6671;
   --annotations-color: #f5a519;
   --active-color: #05b7fb;
@@ -20,9 +18,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  /* color: var(--active-color); */
-  background: var(--background-color);
-  font-size: 1rem;
+
+  background: var(--bg-color);
+  font-size: calc(10px + 0.390625vw);
   overflow: hidden;
   scrollbar-width: none;
   display: flex;
@@ -31,68 +29,79 @@ body {
 }
 
 .MuiInputBase-root {
-  background: var(--backgroundSecond-color);
-  width: 7vw;
-  height: 6vh;
-}
-.MuiButton-root {
-  width: 7vw;
-  height: 6vh;
-  background: var(--annotations-color);
-}
-.MuiInputBase-root:hover {
-  background: var(--annotations-color);
-}
-.MuiToolbar-root {
-  background: var(--background-color);
+  background: var(--bg2-color);
+  width: 7.5rem;
 }
 
-.MuiTableRow-root,
-.MuiPaper-root {
-  background: var(--background-color);
+.MuiButton-root {
+  width: 7.5rem;
+  background: var(--annotations-color);
 }
-.MuiSlider-root {
-  background: var(--background-color);
+
+.MuiInputLabel-root {
+  color: var(--bg-color);
+}
+
+.MuiInputLabel-shrink {
+  color: var(--annotations-color);
+  margin-top: -10px;
+}
+
+.Mui-focused:hover {
+  background: var(--annotations-color);
 }
 
 .MuiSvgIcon-root {
-  color: var(--backgroundSecond-color);
-  font-size: 1vw;
+  color: var(--bg-color);
+  font-size: 1.5vw;
 }
 
 .MuiTabPanel-root {
-  margin-top: 1vh;
+  margin-top: 2vh;
+  padding: 1vh 0;
 }
 
-/* .MuiFormControl-root{
-  width: 10vw;
-} */
-
-/* .Mui-TableHeadCell-Content {
-  background: red;
-}
-.MuiTableCell-root {
-  color: green;
-  background: #f5a519;
-} */
-
-/* th {
-  text-transform: uppercase;
-  text-align: right;
+.MuiTabs-flexContainer {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  color: white;
 }
 
-.Mui-TableHeadCell-Content {
-  width: max-content;
-  padding: 0;
-  margin: 0;
-} */
-th:first-child {
-  width: 5px;
+.MuiDataGrid-root {
+  overflow: hidden;
+  color: #538b99;
+  border-color: #538b99;
 }
 
-.MuiTableCell-root {
-  border: none;
+.MuiButton-root {
+  color: var(--bg2-color);
+  background-color: var(--annotations-color);
+  font-weight: 700;
 }
 
+.MuiTooltip-tooltip {
+  background-color: var(--bg2-color);
+   
+  color: var(--bg-color);
+  font-size: medium;
+  font-weight: 700;
+  border: 1px solid var(--bg-color);
+  box-shadow: rgba(0, 0, 0, 0.16) 1px 2px 4px;
+}
+
+table {
+  width: 100%;
+  background-color: var(--bg2-color);
+  border: 1px solid var(--text2-color);
+  border-radius: 5px;
+}
+th {
+  color: var(--text2-color);
+  text-transform: uppercase;
+}
+
+td {
+  border: 1px solid var(--text2-color);
+  padding: 5px;
+  text-align: center;
+}

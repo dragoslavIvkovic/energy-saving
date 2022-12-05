@@ -1,11 +1,8 @@
 import Footer from "../components/Footer/Footer";
-import { ReactNode } from "react";
+ 
 
-type LayoutProps = {
-  children: ReactNode;
-};
-
-export default function Layout({ children }: LayoutProps) {
+ 
+export default function Layout({ children } ) {
   return (
     <>
       {/* <IndexPage /> */}
