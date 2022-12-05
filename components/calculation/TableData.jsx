@@ -19,34 +19,7 @@ export default function TableData() {
     //XLSX.write(workbook, { bookType: "xlsx", type: "binary" });
     XLSX.writeFile(workbook, "DataSheet.xlsx");
   };
-
-  // const TableData = () => {
-  //   return listData.map((data, index) => {
-  //     const {
-  //       id,
-  //       deviceName,
-  //       energyPrice,
-  //       hoursPerDay,
-  //       daysPerMonth,
-  //       energyConsumption,
-  //       energySum,
-  //       priceSum,
-  //     } = data; //destructuring
-  //     return (
-  //       <tr key={id}>
-  //         <td>{deviceName}</td>
-  //         <td>{energyPrice}</td>
-  //         <td>{hoursPerDay}</td>
-  //         <td>{daysPerMonth}</td>
-  //         <td>{energyConsumption}</td>
-  //         <td>{energySum}</td>
-  //         <td>{priceSum}</td>
-  //         <td onClick={() => dispatch(removeList(id))}>delate</td>
-  //       </tr>
-  //     );
-  //   });
-  // }
-
+ 
   const RemoveRow = (id) => {
     return dispatch(removeList(id));
   };

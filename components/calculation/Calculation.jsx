@@ -1,15 +1,12 @@
-import React, { useRef, useState } from 'react';
-import { Button, Grid, TextField } from '@mui/material';
-import { useDispatch } from 'react-redux';
-import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
-import Tooltip from '@mui/material/Tooltip';
-import { v4 as uuidv4 } from 'uuid';
-import dynamic from 'next/dynamic';
-import {
-  addList,
-} from '../../store/slice/calcSlice';
-import TableData from './TableData';
- 
+import React, { useRef, useState } from "react";
+import { Button, Grid, TextField, Typography } from "@mui/material";
+import { useDispatch } from "react-redux";
+import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
+import Tooltip from "@mui/material/Tooltip";
+import { v4 as uuidv4 } from "uuid";
+import dynamic from "next/dynamic";
+import { addList } from "../../store/slice/calcSlice";
+import TableData from "./TableData";
 
 export default function Calculation() {
   const [hourValue, setHoursValue] = useState();
@@ -20,7 +17,7 @@ export default function Calculation() {
   const hoursPerDayRef = useRef(null);
   const daysPerMonthRef = useRef(null);
   const energyConsumptionRef = useRef(null);
-  const deviceNameRef = useRef('');
+  const deviceNameRef = useRef("");
 
   const onSubmit = () => {
     const hoursPerDay = hoursPerDayRef.current.value;
@@ -50,11 +47,11 @@ export default function Calculation() {
       dispatch(addList(dataListObject));
     }
 
-    hoursPerDayRef.current.value = '';
-    energyConsumptionRef.current.value = '';
+    hoursPerDayRef.current.value = "";
+    energyConsumptionRef.current.value = "";
 
-    daysPerMonthRef.current.value = '';
-    deviceNameRef.current.value = '';
+    daysPerMonthRef.current.value = "";
+    deviceNameRef.current.value = "";
   };
 
   const minhours = 1;
@@ -112,7 +109,7 @@ export default function Calculation() {
             label="hours per day"
             variant="outlined"
             size="small"
-            value={hourValue || ''}
+            value={hourValue || ""}
             inputProps={{ minhours, maxhours }}
             onChange={(e) => {
               let value = parseInt(e.target.value, 10);
@@ -131,7 +128,7 @@ export default function Calculation() {
             label="days in month"
             variant="outlined"
             size="small"
-            value={daysPerMonthValue || ''}
+            value={daysPerMonthValue || ""}
             inputProps={{ mindays, maxdays }}
             onChange={(e) => {
               let value = parseInt(e.target.value, 10);
