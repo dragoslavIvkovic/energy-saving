@@ -1,12 +1,10 @@
 import React, { useRef, useState } from "react";
-import { Button, Grid, TextField, Tooltip } from "@mui/material";
+import { Button, Grid, TextField, Tooltip, Typography } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
-import dynamic from "next/dynamic";
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 import { addListCompare } from "../../store/slice/compareSlice";
-
-const Chart = dynamic(() => import("./Chart.jsx"), { ssr: false });
+import Chart from "./Chart";
 
 export default function Compare() {
   const [hourValue, setHoursValue] = useState();
@@ -163,10 +161,8 @@ export default function Compare() {
           />
         </Tooltip>
         <DoubleArrowIcon />
-
         <Button onClick={onSubmit}>Submit</Button>
       </Grid>
-
       <Grid
         container
         direction="column"

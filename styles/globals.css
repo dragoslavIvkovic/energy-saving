@@ -18,9 +18,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-
   background: var(--bg-color);
-  font-size: calc(10px + 0.390625vw);
+  font-size: calc(10px + 0.390625vw);;
   overflow: hidden;
   scrollbar-width: none;
   display: flex;
@@ -36,6 +35,11 @@ body {
 .MuiButton-root {
   width: 7.5rem;
   background: var(--annotations-color);
+}
+
+.MuiButton-root:hover {
+  background-color: var(--bg2-color);
+ color: var(--annotations-color);
 }
 
 .MuiInputLabel-root {
@@ -80,11 +84,11 @@ body {
 }
 
 .MuiTooltip-tooltip {
-  background-color: var(--bg2-color);
-   
+  background-color: var(--bg2-color);   
   color: var(--bg-color);
   font-size: medium;
   font-weight: 700;
+  bottom:10px;
   border: 1px solid var(--bg-color);
   box-shadow: rgba(0, 0, 0, 0.16) 1px 2px 4px;
 }
@@ -104,4 +108,15 @@ td {
   border: 1px solid var(--text2-color);
   padding: 5px;
   text-align: center;
+}
+
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:var(--bg2-color);
+    
+   text-align: center;
 }
