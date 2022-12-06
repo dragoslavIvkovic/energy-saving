@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
-import Box from "@mui/material/Box";
-
+import React  from "react";
+ 
 import * as XLSX from "xlsx";
-import { Button } from "@mui/material";
+ 
 import { useSelector, useDispatch } from "react-redux";
 import { removeList } from "../../store/slice/calcSlice";
-import DeleteIcon from "@mui/icons-material/Delete";
+import { MdDelete } from "react-icons/md";
+ import styles from "../../styles/Elements.module.css";
+
 
 export default function TableData() {
   const dispatch = useDispatch();
@@ -20,34 +21,7 @@ export default function TableData() {
     //XLSX.write(workbook, { bookType: "xlsx", type: "binary" });
     XLSX.writeFile(workbook, "DataSheet.xlsx");
   };
-
-  // const TableData = () => {
-  //   return listData.map((data, index) => {
-  //     const {
-  //       id,
-  //       deviceName,
-  //       energyPrice,
-  //       hoursPerDay,
-  //       daysPerMonth,
-  //       energyConsumption,
-  //       energySum,
-  //       priceSum,
-  //     } = data; //destructuring
-  //     return (
-  //       <tr key={id}>
-  //         <td>{deviceName}</td>
-  //         <td>{energyPrice}</td>
-  //         <td>{hoursPerDay}</td>
-  //         <td>{daysPerMonth}</td>
-  //         <td>{energyConsumption}</td>
-  //         <td>{energySum}</td>
-  //         <td>{priceSum}</td>
-  //         <td onClick={() => dispatch(removeList(id))}>delate</td>
-  //       </tr>
-  //     );
-  //   });
-  // }
-
+ 
   const RemoveRow = (id) => {
     return dispatch(removeList(id));
   };
@@ -55,15 +29,8 @@ export default function TableData() {
   let isObjectEmpty = Object.keys(listData).length === 0;
 
   return (
-    <Box sx={{ height: 400, width: "100%", margin: "0 0 2vh 0" }}>
-      <Button
-        sx={{ width: "7vw", fontSize: "10px", marginBottom: "2vh" }}
-        variant="contained"
-        size="small"
-        onClick={() => downloadExcel()}
-      >
-        Download Data
-      </Button>
+    <div className={styles.table}>
+      <button onClick={() => downloadExcel()}>Download Data</button>
 
       {!isObjectEmpty && (
         <table>
@@ -92,13 +59,13 @@ export default function TableData() {
                 <td>{row.priceSum}</td>
                 <td>{row.monthlyPriceOfEnergyUsed}</td>
                 <td onClick={() => RemoveRow(row.id)}>
-                  <DeleteIcon />
+                  <MdDelete />
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
       )}
-    </Box>
+    </div>
   );
 }

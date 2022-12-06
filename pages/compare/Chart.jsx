@@ -9,6 +9,7 @@ import {
   Legend,
 } from "recharts";
 import { useSelector } from "react-redux";
+import styles from "../../styles/Elements.module.css";
 
 export default function Chart() {
   const listData = useSelector((state) => state.compare.list);
@@ -16,7 +17,7 @@ export default function Chart() {
   const data = listData.map((datas) => datas);
 
   return (
-    <>
+    <div className={styles.chart}>
       <BarChart
         width={500}
         height={300}
@@ -58,6 +59,6 @@ export default function Chart() {
 
         <Bar dataKey="yearlyPriceOfEnergyUsed" stackId="a" fill="#82ca9d" />
       </BarChart>
-    </>
+    </div>
   );
 }
