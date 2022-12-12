@@ -62,7 +62,8 @@ export default function Index() {
           title="This is a tooltip"
           className={styles.inputTooltip}
         />
-        <MdDoubleArrow fill="#14667a" />
+        <ArrowIcon/>
+
         <input
           ref={energyPriceRef}
           type="number"
@@ -70,7 +71,8 @@ export default function Index() {
           title="This is a tooltip"
           className={styles.inputTooltip}
         />{" "}
-        <MdDoubleArrow fill="#14667a" />
+        <ArrowIcon/>
+
         <input
           ref={energyConsumptionRef}
           type="number"
@@ -78,7 +80,8 @@ export default function Index() {
           title="This is a tooltip"
           className={styles.inputTooltip}
         />
-        <MdDoubleArrow fill="#14667a" />
+        <ArrowIcon/>
+
         <input
           ref={hoursPerDayRef}
           type="number"
@@ -88,14 +91,16 @@ export default function Index() {
           title="This is a tooltip"
           className={styles.inputTooltip}
         />
-        <MdDoubleArrow fill="#14667a" />
+        <ArrowIcon/>
+
         <input
           ref={daysPerMonthRef}
           type="number"
           title="This is a tooltip"
           className={styles.inputTooltip}
         />
-        <MdDoubleArrow fill="#14667a" />
+        <ArrowIcon/>
+
         <button onClick={onSubmit}>Submit</button>
       </div>
 

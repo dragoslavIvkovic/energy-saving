@@ -1,9 +1,5 @@
 add hover for button
-table header smaller font
-chart labels
+ about page white err
+ how to hide email credits
 
-add about page
-add footer
-add background
-
-bug on vercel = white tables
+ change chart labels

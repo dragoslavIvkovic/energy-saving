@@ -1,11 +1,10 @@
 import React, { useRef, useState } from "react";
-
 import { useDispatch } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
-
 import { addListCompare } from "../../store/slice/compareSlice";
 import Chart from "./Chart";
 import styles from "../../styles/Elements.module.css";import { MdDoubleArrow } from "react-icons/md";
+import ArrowIcon from "../../components/ArrowIcon";
 export default function Compare() {
   const [hourValue, setHoursValue] = useState();
   const [daysPerMonthValue, setDaysPerMonthValue] = useState();
@@ -77,7 +76,8 @@ export default function Compare() {
           title="This is a tooltip"
           className={styles.inputTooltip}
         />
-        <MdDoubleArrow fill="#14667a" />
+        <ArrowIcon/>
+
 
         <input
           ref={devicePriceRef}
@@ -86,7 +86,8 @@ export default function Compare() {
           title="enter the purchase price of the device"
           className={styles.inputTooltip}
         />
-        <MdDoubleArrow fill="#14667a" />
+        <ArrowIcon/>
+
 
         <input
           ref={energyPriceRef}
@@ -95,7 +96,8 @@ export default function Compare() {
           title="enter the price of electricity"
           className={styles.inputTooltip}
         />
-        <MdDoubleArrow fill="#14667a" />
+        <ArrowIcon/>
+
 
         <input
           ref={energyConsumptionRef}
@@ -104,7 +106,8 @@ export default function Compare() {
           title="enter the purchase price of the device"
           className={styles.inputTooltip}
         />
-        <MdDoubleArrow fill="#14667a" />
+        <ArrowIcon/>
+
 
         <input
           ref={hoursPerDayRef}
@@ -113,7 +116,8 @@ export default function Compare() {
           title="enter the purchase price of the device"
           className={styles.inputTooltip}
         />
-        <MdDoubleArrow fill="#14667a" />
+        <ArrowIcon/>
+
 
         <input
           ref={daysPerMonthRef}
@@ -123,7 +127,8 @@ export default function Compare() {
           title="enter the purchase price of the device"
           className={styles.inputTooltip}
         />
-        <MdDoubleArrow fill="#14667a" />
+        <ArrowIcon/>
+
 
         <button onClick={onSubmit}>Submit</button>
       </div>

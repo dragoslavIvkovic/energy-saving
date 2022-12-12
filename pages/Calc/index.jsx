@@ -5,6 +5,7 @@ import { addList } from "../../store/slice/calcSlice";
 import TableData from "./TableData";
 import styles from "../../styles/Elements.module.css";
 import { MdDoubleArrow } from "react-icons/md";
+import ArrowIcon from "../../components/ArrowIcon";
 
 export default function Index() {
   const dispatch = useDispatch();
@@ -62,7 +63,8 @@ export default function Index() {
           title="This is a tooltip"
           className={styles.inputTooltip}
         />
-        <MdDoubleArrow fill="#14667a" />
+        <ArrowIcon/>
+
         <input
           ref={energyPriceRef}
           type="number"
@@ -70,7 +72,8 @@ export default function Index() {
           title="This is a tooltip"
           className={styles.inputTooltip}
         />{" "}
-        <MdDoubleArrow fill="#14667a" />
+        <ArrowIcon/>
+
         <input
           ref={energyConsumptionRef}
           type="number"
@@ -78,7 +81,8 @@ export default function Index() {
           title="This is a tooltip"
           className={styles.inputTooltip}
         />
-        <MdDoubleArrow fill="#14667a" />
+        <ArrowIcon/>
+
         <input
           ref={hoursPerDayRef}
           type="number"
@@ -88,14 +92,16 @@ export default function Index() {
           title="This is a tooltip"
           className={styles.inputTooltip}
         />
-        <MdDoubleArrow fill="#14667a" />
+        <ArrowIcon/>
+
         <input
           ref={daysPerMonthRef}
           type="number"
           title="This is a tooltip"
           className={styles.inputTooltip}
         />
-        <MdDoubleArrow fill="#14667a" />
+        <ArrowIcon/>
+
         <button onClick={onSubmit}>Submit</button>
       </div>
 
