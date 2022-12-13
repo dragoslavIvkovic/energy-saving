@@ -1,3 +1,6 @@
+
+
+
 .navbar{
     display: flex;
 align-items: center;
@@ -8,6 +11,8 @@ justify-content: center;
 
 .navbar a{
     padding: 1vw;
-    color: blanchedalmond;
+    margin-bottom: 3vh;
+    /* color: blanchedalmond; */
     text-decoration: none;
 }
+

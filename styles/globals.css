@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
 
 :root {
   --bg-color: #004953;
@@ -10,6 +9,7 @@
   --disabled-color: #3c6671;
   --annotations-color: #f5a519;
   --active-color: #05b7fb;
+  --text-shadow: 0.5px 0.5px 0.5px #021b1e;
 }
 
 * {
@@ -29,11 +29,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-   font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 table {
   width: 100%;
+  margin-top: 20px;
   background-color: var(--bg2-color);
   border: 1px solid var(--text2-color);
   border-radius: 5px;
@@ -54,50 +55,44 @@ td {
 input {
   background: var(--bg2-color);
   width: 20%;
-  height: 2rem;border-radius: 6px;
-  border: 0;border: 1px solid var(--text2-color);
- box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  height: 2rem;
+  border-radius: 6px;
+  border: 1px solid var(--text2-color);
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
   color: var(--text3-color);
-  font-size: 1rem;
+  font-size: 0.9rem;
   text-align: center;
-   
- font-weight: 700;
-
+  font-weight: 700;
+ 
 }
 
-input:first-child{
-  color:var(--active-color)
+input:first-child {
+  color: var(--active-color);
 }
-input:nth-of-type(3){
-  color:var(--active-color)
+input:nth-of-type(3) {
+  color: var(--active-color);
 }
 
-input:hover{
+input:hover {
   color: var(--text2-color);
- background-color: var(--annotations-color);
-  
- font-weight: 700;
-
+  background-color: var(--annotations-color);
+  font-weight: 700;
 }
 
 button {
   width: 20%;
   height: 2rem;
   background: var(--annotations-color);
- border: 0;
+  border: 0;
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
   box-sizing: border-box;
   color: var(--text3-color);
   cursor: pointer;
   display: inline-block;
-  
   font-size: 16px;
   font-weight: 800;
-  /* line-height: 16px;
-  min-height: 40px; */
   outline: 0;
-  /* padding: 12px 14px; */
   text-align: center;
   text-rendering: geometricprecision;
   text-transform: none;
@@ -107,22 +102,21 @@ button {
   vertical-align: middle;
 }
 
-button:hover{
- color: var( --annotations-color);
- background-color: var(--bg2-color);
+button:hover {
+  color: var(--annotations-color);
+  background-color: var(--bg2-color);
 }
 
 .button-24:hover,
 .button-24:active {
   background-color: initial;
   background-position: 0 0;
-  color: #FF4742;
+  color: #ff4742;
 }
 
 .button-24:active {
-  opacity: .5;
+  opacity: 0.5;
 }
- 
 
 .footer {
   position: fixed;
@@ -130,11 +124,13 @@ button:hover{
   bottom: 0;
   width: 100%;
   background-color: var(--bg2-color);
-
   text-align: center;
 }
 
-/* #icon{
- background-color: red;
- 
-  } */
+label{
+  color:var(--bg2-color) ;
+  font-size: 1rem;
+  font-weight: 900;
+  text-shadow: var(--text-shadow);
+  margin: 10px ;
+}

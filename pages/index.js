@@ -3,13 +3,11 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Calc from './Calc/index.jsx'
  
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Elements.module.css";
 
 
 const Home = () => {
-  const router = useRouter();
-
-  console.log(router.locale);
+  
   return (
     <div className={styles.container}>
       <Head>

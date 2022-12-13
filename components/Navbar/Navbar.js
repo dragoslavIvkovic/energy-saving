@@ -1,15 +1,15 @@
-import React from 'react'
-import Link from "next/link";   //import this
-import styles from "./navbar.module.css"
+import React from "react";
+import styles from "./navbar.module.css";
+import ActiveLink from "./ActiveLink";
 
 function Navbar() {
   return (
     <div className={styles.navbar}>
-      <Link href="/compare">Compare</Link>
-      <Link href="/Calc">Calculation</Link>
-      <Link href="/Contact">Contact</Link>
+      <ActiveLink href="/compare">Compare</ActiveLink>
+      <ActiveLink href="/Calc">Calculation</ActiveLink>
+      <ActiveLink href="/Contact">Contact</ActiveLink>
     </div>
   );
 }
 
-export default Navbar
+export default Navbar;

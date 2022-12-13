@@ -1,4 +1,4 @@
-import styles from "../../styles/Home.module.css";
+import styles from "./Contact.module.css";
 import { useState } from "react";
 
 export default function About() {
@@ -62,7 +62,7 @@ export default function About() {
         required
       ></textarea>
 
-      <input className={styles.button} type="submit" />
+      <button  type="submit" />
       {submitted == true ? alert("Thank you for your message") : ""}
     </form>
   );

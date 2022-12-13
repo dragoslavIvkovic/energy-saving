@@ -3,8 +3,10 @@ import { useDispatch } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
 import { addListCompare } from "../../store/slice/compareSlice";
 import Chart from "./Chart";
-import styles from "../../styles/Elements.module.css";import { MdDoubleArrow } from "react-icons/md";
+import styles from "../../styles/Elements.module.css";
+import { MdDoubleArrow } from "react-icons/md";
 import ArrowIcon from "../../components/ArrowIcon";
+
 export default function Compare() {
   const [hourValue, setHoursValue] = useState();
   const [daysPerMonthValue, setDaysPerMonthValue] = useState();
@@ -64,8 +66,6 @@ export default function Compare() {
     deviceNameRef.current.value = "";
   };
 
-  
-
   return (
     <div className={styles.container}>
       <div className={styles.compare}>
@@ -76,8 +76,7 @@ export default function Compare() {
           title="This is a tooltip"
           className={styles.inputTooltip}
         />
-        <ArrowIcon/>
-
+        <ArrowIcon />
 
         <input
           ref={devicePriceRef}
@@ -86,8 +85,7 @@ export default function Compare() {
           title="enter the purchase price of the device"
           className={styles.inputTooltip}
         />
-        <ArrowIcon/>
-
+        <ArrowIcon />
 
         <input
           ref={energyPriceRef}
@@ -96,8 +94,7 @@ export default function Compare() {
           title="enter the price of electricity"
           className={styles.inputTooltip}
         />
-        <ArrowIcon/>
-
+        <ArrowIcon />
 
         <input
           ref={energyConsumptionRef}
@@ -106,8 +103,7 @@ export default function Compare() {
           title="enter the purchase price of the device"
           className={styles.inputTooltip}
         />
-        <ArrowIcon/>
-
+        <ArrowIcon />
 
         <input
           ref={hoursPerDayRef}
@@ -116,8 +112,7 @@ export default function Compare() {
           title="enter the purchase price of the device"
           className={styles.inputTooltip}
         />
-        <ArrowIcon/>
-
+        <ArrowIcon />
 
         <input
           ref={daysPerMonthRef}
@@ -127,8 +122,7 @@ export default function Compare() {
           title="enter the purchase price of the device"
           className={styles.inputTooltip}
         />
-        <ArrowIcon/>
-
+        <ArrowIcon />
 
         <button onClick={onSubmit}>Submit</button>
       </div>
