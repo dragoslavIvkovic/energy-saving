@@ -72,7 +72,7 @@ export default function Compare() {
         <input
           ref={deviceNameRef}
           type="text"
-          label="device name"
+          placeholder="device name"
           title="This is a tooltip"
           className={styles.inputTooltip}
         />
@@ -82,7 +82,7 @@ export default function Compare() {
         <input
           ref={devicePriceRef}
           type="number"
-          label="device price"
+          placeholder="device price"
           title="enter the purchase price of the device"
           className={styles.inputTooltip}
         />
@@ -92,7 +92,7 @@ export default function Compare() {
         <input
           ref={energyPriceRef}
           type="number"
-          label="energy price"
+          placeholder="energy price"
           title="enter the price of electricity"
           className={styles.inputTooltip}
         />
@@ -102,7 +102,7 @@ export default function Compare() {
         <input
           ref={energyConsumptionRef}
           type="number"
-          label="kwh"
+          placeholder="kwh"
           title="enter the purchase price of the device"
           className={styles.inputTooltip}
         />
@@ -112,7 +112,7 @@ export default function Compare() {
         <input
           ref={hoursPerDayRef}
           type="number"
-          label="hours per day"
+          placeholder="hours per day"
           title="enter the purchase price of the device"
           className={styles.inputTooltip}
         />
@@ -122,7 +122,7 @@ export default function Compare() {
         <input
           ref={daysPerMonthRef}
           type="number"
-          label="days in month"
+          placeholder="days in month"
           variant="outlined"
           title="enter the purchase price of the device"
           className={styles.inputTooltip}

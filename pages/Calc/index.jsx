@@ -59,49 +59,44 @@ export default function Index() {
         <input
           ref={deviceNameRef}
           type="text"
-          label="device name"
+          placeholder="device name"
           title="This is a tooltip"
           className={styles.inputTooltip}
         />
-        <ArrowIcon/>
-
-        <input
-          ref={energyPriceRef}
-          type="number"
-          label="energy price"
-          title="This is a tooltip"
-          className={styles.inputTooltip}
-        />{" "}
-        <ArrowIcon/>
-
+        <ArrowIcon />
         <input
           ref={energyConsumptionRef}
           type="number"
-          label="kwh"
+          placeholder="kwh"
           title="This is a tooltip"
           className={styles.inputTooltip}
         />
-        <ArrowIcon/>
-
+        <ArrowIcon />
+        <input
+          ref={energyPriceRef}
+          type="number"
+          placeholder="energy price"
+          title="This is a tooltip"
+          className={styles.inputTooltip}
+        />{" "}
+        <ArrowIcon />
         <input
           ref={hoursPerDayRef}
           type="number"
-          label="hours per day"
+          placeholder="hours per day"
           variant="outlined"
           size="small"
           title="This is a tooltip"
           className={styles.inputTooltip}
         />
-        <ArrowIcon/>
-
+        <ArrowIcon />
         <input
           ref={daysPerMonthRef}
           type="number"
           title="This is a tooltip"
           className={styles.inputTooltip}
         />
-        <ArrowIcon/>
-
+        <ArrowIcon />
         <button onClick={onSubmit}>Submit</button>
       </div>
 

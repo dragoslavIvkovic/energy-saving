@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+
 :root {
   --bg-color: #004953;
   --bg2-color: #14667a;
   --text-color: #fefefe;
+  --text3-color: blanchedalmond;
   --text2-color: #538b99;
   --disabled-color: #3c6671;
   --annotations-color: #f5a519;
@@ -25,6 +29,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+   font-family: 'Lato', sans-serif;
 }
 
 table {
@@ -52,6 +57,26 @@ input {
   height: 2rem;border-radius: 6px;
   border: 0;border: 1px solid var(--text2-color);
  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  color: var(--text3-color);
+  font-size: 1rem;
+  text-align: center;
+   
+ font-weight: 700;
+
+}
+
+input:first-child{
+  color:var(--active-color)
+}
+input:nth-of-type(3){
+  color:var(--active-color)
+}
+
+input:hover{
+  color: var(--text2-color);
+ background-color: var(--annotations-color);
+  
+ font-weight: 700;
 
 }
 
@@ -63,7 +88,7 @@ button {
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
   box-sizing: border-box;
-  color: var(--text-color);
+  color: var(--text3-color);
   cursor: pointer;
   display: inline-block;
   
@@ -80,6 +105,11 @@ button {
   -webkit-user-select: none;
   touch-action: manipulation;
   vertical-align: middle;
+}
+
+button:hover{
+ color: var( --annotations-color);
+ background-color: var(--bg2-color);
 }
 
 .button-24:hover,
