@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./GDPR.module.css";
 
 const GDPRConsent = () => {
   const [isConsentGiven, setIsConsentGiven] = useState(false);
@@ -9,8 +10,8 @@ const GDPRConsent = () => {
 
   if (!isConsentGiven) {
     return (
-      <div>
-        <p>
+      <div className={styles.gdpr_container}>
+        <p className={styles.text}>
           We use cookies to personalize content and ads, to provide social media
           features and to analyze our traffic. We also share information about
           your use of our site with our social media, advertising and analytics

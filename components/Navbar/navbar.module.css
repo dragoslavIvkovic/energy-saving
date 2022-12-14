@@ -15,4 +15,9 @@ justify-content: center;
     /* color: blanchedalmond; */
     text-decoration: none;
 }
+.navbar a:hover{
+    
+    background-color: #07343a;
+    padding: 5px;
+}
 

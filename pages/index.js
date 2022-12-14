@@ -1,6 +1,8 @@
 import Head from "next/head";
-import styles from "../styles/Elements.module.css";
+import styles from "../styles/Home.module.css";
 import GDPRConsent from "../components/GDPRConsent/GDPRConsent.js";
+import Calc from "../pages/Calc"
+import Link from "next/link";
 
 const Home = () => {
   return (
@@ -23,14 +25,23 @@ const Home = () => {
           Are you tired of worrying about the high cost of your monthly
           electrical bills? Our energy calculator app is here to help! Our app
           allows you to easily track and compare the energy consumption of your
-          household devices. With our app, you can find out which devices are
-          using the most energy and how much they are costing you. By using our
-          app, you can make informed decisions about which devices to use more
-          often and which ones to limit or even replace. Plus, with our app's
-          easy-to-use interface and accurate calculations, you can trust that
-          you are getting the most accurate information possible. Don't let high
-          energy costs stress you out any longer. Try our energy calculator app
-          today and start saving money on your monthly bills!
+          household devices{" "}
+          <Link href="/compare">
+            <a className={styles.link_in_text}>Compare device</a>
+          </Link>
+          . With our app, you can find out which devices are using the most
+          energy and how much they are costing you. By using our app, you can
+          make informed decisions about which devices to use more often and
+          which ones to limit or even replace. Plus, with our app's easy-to-use
+          interface and accurate calculations, you can trust that you are
+          getting the most accurate information possible.
+          <Link href="/Calc">
+            <a className={styles.link_in_text}>
+              &nbsp;Calculate electricity consumption
+            </a>
+          </Link>{" "}
+          Don't let high energy costs stress you out any longer. Try our energy
+          calculator app today and start saving money on your monthly bills!
           <code className={styles.code}></code>
         </p>
 
