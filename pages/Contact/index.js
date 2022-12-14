@@ -26,43 +26,34 @@ export default function About() {
 
   return (
     <form className={styles.form} onSubmit={(e) => Userdata(e)}>
-      <label className={styles.nameForm} htmlFor="Name">
-        Full Name:{" "}
-      </label>
       <input
         type="text"
         className={styles.nameInput}
-        placeholder="John Doe"
+        placeholder="Title of the message"
         name="Name"
         id="Name"
         required
       />
 
-      <label className={styles.emailForm} htmlFor="Email">
-        Email:{" "}
-      </label>
       <input
         type="email"
         className={styles.emailInput}
-        placeholder="johndoe@johndoe.com"
+        placeholder="your email"
         name="Email"
         id="Email"
         required
       />
 
-      <label className={styles.messageForm} htmlFor="Message">
-        Message:{" "}
-      </label>
       <textarea
         type="text"
         className={styles.message}
-        placeholder="Write something.."
+        placeholder="Write your message to the programmer"
         name="Message"
         id="Message"
         required
       ></textarea>
 
-      <button  type="submit" />
+      <button type="submit" />
       {submitted == true ? alert("Thank you for your message") : ""}
     </form>
   );

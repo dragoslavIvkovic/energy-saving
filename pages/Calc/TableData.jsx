@@ -1,7 +1,5 @@
-import React  from "react";
- 
-import * as XLSX from "xlsx";
- 
+import React  from "react"; 
+import * as XLSX from "xlsx"; 
 import { useSelector, useDispatch } from "react-redux";
 import { removeList } from "../../store/slice/calcSlice";
 import { MdDelete } from "react-icons/md";

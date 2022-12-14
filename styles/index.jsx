@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
 import { addList } from "../../store/slice/calcSlice";
 import TableData from "./TableData";
-import styles from "../../styles/Elements.module.css";
+import styles from "../../styles/globals.css";
 import { MdDoubleArrow } from "react-icons/md";
 
 export default function Index() {

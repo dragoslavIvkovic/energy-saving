@@ -9,7 +9,7 @@
   --disabled-color: #3c6671;
   --annotations-color: #f5a519;
   --active-color: #05b7fb;
-  --text-shadow: 0.5px 0.5px 0.5px #021b1e;
+  --text-shadow: 0.3px 0.3px 0.3px #021b1e;
 }
 
 * {
@@ -30,6 +30,7 @@ body {
   align-items: center;
   justify-content: center;
   font-family: "Lato", sans-serif;
+  text-shadow: var(--text-shadow);
 }
 
 table {
@@ -63,7 +64,6 @@ input {
   font-size: 0.9rem;
   text-align: center;
   font-weight: 700;
- 
 }
 
 input:first-child {
@@ -127,10 +127,11 @@ button:hover {
   text-align: center;
 }
 
-label{
-  color:var(--bg2-color) ;
+label {
+  color: var(--bg2-color);
   font-size: 1rem;
   font-weight: 900;
-  text-shadow: var(--text-shadow);
-  margin: 10px ;
+  margin: 10px;
 }
+
+/* navbar */

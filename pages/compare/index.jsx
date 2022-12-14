@@ -4,12 +4,10 @@ import { v4 as uuidv4 } from "uuid";
 import { addListCompare } from "../../store/slice/compareSlice";
 import Chart from "./Chart";
 import styles from "../../styles/Elements.module.css";
-import { MdDoubleArrow } from "react-icons/md";
 import ArrowIcon from "../../components/ArrowIcon";
 
 export default function Compare() {
-  const [hourValue, setHoursValue] = useState();
-  const [daysPerMonthValue, setDaysPerMonthValue] = useState();
+ 
   const dispatch = useDispatch();
   const devicePriceRef = useRef(null);
   const energyPriceRef = useRef(null);
