@@ -5,6 +5,7 @@ import { addList } from "../../store/slice/calcSlice";
 import TableData from "./TableData";
 import styles from "../../styles/Elements.module.css";
 import ArrowIcon from "../../components/ArrowIcon";
+import { formatToCurrency } from "../../components/CurrncyFormat";
 
 export default function Index() {
   const dispatch = useDispatch();
@@ -31,12 +32,15 @@ export default function Index() {
       energySum: Number(energyConsumption * hoursPerDay * daysPerMonth).toFixed(
         2
       ),
-      monthlyPriceOfEnergyUsed: Number(
-        energyPrice * hoursPerDay * daysPerMonth
-      ).toFixed(2),
-      yearlyPriceOfEnergyUsed: Number(
+      // priceSum: formatToCurrency(
+      //   energyConsumption *  hoursPerDay * daysPerMonth
+      // ),
+      monthlyPriceOfEnergyUsed: formatToCurrency(
+        energyConsumption * energyPrice * hoursPerDay * daysPerMonth
+      ),
+      yearlyPriceOfEnergyUsed: formatToCurrency(
         energyConsumption * hoursPerDay * daysPerMonth * energyPrice * 12
-      ).toFixed(2),
+      ),
     };
 
     if (deviceName) {
@@ -45,7 +49,6 @@ export default function Index() {
 
     hoursPerDayRef.current.value = "";
     energyConsumptionRef.current.value = "";
-
     daysPerMonthRef.current.value = "";
     deviceNameRef.current.value = "";
   };
@@ -93,6 +96,7 @@ export default function Index() {
           ref={daysPerMonthRef}
           type="number"
           title="This is a tooltip"
+          placeholder="days per month"
           className={styles.inputTooltip}
         />
         <ArrowIcon />

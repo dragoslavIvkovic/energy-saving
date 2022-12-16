@@ -11,6 +11,8 @@ export default function TableData() {
 
   const listData = useSelector((state) => state.calculation.list);
 
+  console.log(`⬇️ listData ⬇️`, listData)
+
   const downloadExcel = () => {
     const worksheet = XLSX.utils.json_to_sheet(listData);
     const workbook = XLSX.utils.book_new();
@@ -40,6 +42,7 @@ export default function TableData() {
               <th>days per month</th>
               <th>kwh</th>
               <th>energy Sum</th>
+              {/* <th>€/price</th> */}
               <th>€/monthly</th>
               <th>€/yearly</th>
               <th>remove</th>
@@ -54,8 +57,9 @@ export default function TableData() {
                 <td>{row.daysPerMonth}</td>
                 <td>{row.energyConsumption}</td>
                 <td>{row.energySum}</td>
-                <td>{row.priceSum}</td>
+                {/* <td>{row.priceSum}</td> */}
                 <td>{row.monthlyPriceOfEnergyUsed}</td>
+                <td>{row.yearlyPriceOfEnergyUsed}</td>
                 <td onClick={() => RemoveRow(row.id)}>
                   <MdDelete />
                 </td>
