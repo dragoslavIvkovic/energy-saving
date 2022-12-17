@@ -9,6 +9,10 @@
   --disabled-color: #3c6671;
   --annotations-color: #f5a519;
   --active-color: #05b7fb;
+  --active-1: #A22C29;
+  --active-2: #d2e4c4;
+  --active-3: #e84855;
+  --active-4: #d1345b;
   --text-shadow: 0.3px 0.3px 0.3px #021b1e;
 }
 
@@ -30,7 +34,7 @@ body {
   align-items: center;
   justify-content: center;
   font-family: "Lato", sans-serif;
-  text-shadow: var(--text-shadow);
+  /* text-shadow: var(--text-shadow); */
 }
 
 table {

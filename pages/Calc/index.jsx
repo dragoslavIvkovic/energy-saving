@@ -35,10 +35,10 @@ export default function Index() {
       // priceSum: formatToCurrency(
       //   energyConsumption *  hoursPerDay * daysPerMonth
       // ),
-      monthlyPriceOfEnergyUsed: formatToCurrency(
+      priceOfMonthlyConsumption: formatToCurrency(
         energyConsumption * energyPrice * hoursPerDay * daysPerMonth
       ),
-      yearlyPriceOfEnergyUsed: formatToCurrency(
+      annualConsumptionPrice: formatToCurrency(
         energyConsumption * hoursPerDay * daysPerMonth * energyPrice * 12
       ),
     };

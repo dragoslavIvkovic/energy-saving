@@ -5,6 +5,7 @@ import { addListCompare } from "../../store/slice/compareSlice";
 import Chart from "./Chart";
 import styles from "../../styles/Elements.module.css";
 import ArrowIcon from "../../components/ArrowIcon";
+import { formatToCurrency } from "../../components/CurrncyFormat";
 
 export default function Compare() {
  
@@ -23,20 +24,22 @@ export default function Compare() {
     const energyConsumption = energyConsumptionRef.current.value;
     const daysPerMonth = daysPerMonthRef.current.value;
     const deviceName = deviceNameRef.current.value;
-    const energySum = Number(
-      energyConsumption * hoursPerDay * daysPerMonth
-    ).toFixed(2);
-    const priceSum = Number(
+    const energySum =
+      Number(energyConsumption * hoursPerDay * daysPerMonth).toFixed(2) +
+      " kWh"; ;
+    const priceSum = formatToCurrency(
       energyConsumption * energyPrice * (hoursPerDay * daysPerMonth)
-    ).toFixed(2);
-    const monthlyPriceOfEnergyUsed = Number(priceSum * daysPerMonth).toFixed(2);
-    const monthlySum = Number(devicePrice) + Number(monthlyPriceOfEnergyUsed);
-    const yearlyPriceOfEnergyUsed = Number(
-      monthlyPriceOfEnergyUsed * 12
-    ).toFixed(2);
-    const yearlySum = (
-      Number(devicePrice) + Number(yearlyPriceOfEnergyUsed)
-    ).toFixed(2);
+    );
+    const priceOfMonthlyConsumption = formatToCurrency(
+      priceSum * daysPerMonth
+    );
+    const monthlySum = Number(devicePrice) + Number(priceOfMonthlyConsumption);
+    const annualConsumptionPrice = formatToCurrency(Number(
+      priceOfMonthlyConsumption * 12
+    ));
+    const yearlySum =
+      Number(devicePrice + annualConsumptionPrice).toFixed(2) 
+      +" kWh";
 
     const dataListObject = {
       id: uuidv4(),
@@ -48,9 +51,9 @@ export default function Compare() {
       daysPerMonth,
       energySum,
       priceSum,
-      monthlyPriceOfEnergyUsed,
+      priceOfMonthlyConsumption,
       monthlySum,
-      yearlyPriceOfEnergyUsed,
+      annualConsumptionPrice,
       yearlySum,
     };
 

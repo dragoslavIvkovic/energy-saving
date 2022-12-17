@@ -44,7 +44,7 @@ export default function TableData() {
               <th>energy Sum</th>
               {/* <th>€/price</th> */}
               <th>€/monthly</th>
-              <th>€/yearly</th>
+              <th>€/annual</th>
               <th>remove</th>
             </tr>
           </thead>
@@ -58,8 +58,8 @@ export default function TableData() {
                 <td>{row.energyConsumption}</td>
                 <td>{row.energySum}</td>
                 {/* <td>{row.priceSum}</td> */}
-                <td>{row.monthlyPriceOfEnergyUsed}</td>
-                <td>{row.yearlyPriceOfEnergyUsed}</td>
+                <td>{row.priceOfMonthlyConsumption}</td>
+                <td>{row.annualConsumptionPrice}</td>
                 <td onClick={() => RemoveRow(row.id)}>
                   <MdDelete />
                 </td>
