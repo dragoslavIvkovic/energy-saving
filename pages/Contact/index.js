@@ -53,7 +53,7 @@ export default function About() {
         required
       ></textarea>
 
-      <button type="submit" />
+      <button type="submit">Send</button>
       {submitted == true ? alert("Thank you for your message") : ""}
     </form>
   );
