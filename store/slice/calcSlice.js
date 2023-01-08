@@ -1,7 +1,8 @@
-import { createSlice } from "@reduxjs/toolkit";
+/* eslint-disable no-param-reassign */
+import { createSlice } from '@reduxjs/toolkit';
 
 export const calcSlice = createSlice({
-  name: "calculation",
+  name: 'calculation',
   initialState: {
     powerConsumption: 0,
     list: [],
@@ -22,9 +23,8 @@ export const calcSlice = createSlice({
       // state.list.push(action.payload);
     },
     removeList: (state, action) => {
-      const   id   = action.payload; 
+      const id = action.payload;
       state.list = state.list.filter((item) => item.id !== id);
-       console.log(`⬇️  state.list ⬇️`, state.list);
       // }
       // state.list.push(action.payload);
     },
@@ -32,8 +32,9 @@ export const calcSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { addPowerConsumption, addList, addPrice, removeList } =
-  calcSlice.actions;
+export const {
+  addPowerConsumption, addList, addPrice, removeList,
+} = calcSlice.actions;
 export const selectorCalc = (state) => state.calculation;
 
 export default calcSlice.reducer;

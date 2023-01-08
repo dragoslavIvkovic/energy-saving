@@ -1,11 +1,12 @@
-import "../styles/globals.css";
-import { Provider } from "react-redux";
-import Layout from "./layout";
-import store from "../store/store";
+/* eslint-disable react/prop-types */
+/* eslint-disable react/jsx-props-no-spreading */
+import '../styles/globals.css';
+import { Provider } from 'react-redux';
+import Layout from './layout';
+import store from '../store/store';
 
 export default function MyApp({
   Component,
-
   pageProps,
 }) {
   return (

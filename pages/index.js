@@ -1,10 +1,11 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import GDPRConsent from "../components/GDPRConsent/GDPRConsent.js";
-import Calc from "../pages/Calc"
-import Link from "next/link";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable import/extensions */
+import Head from 'next/head';
+import Link from 'next/link';
+import styles from '../styles/Home.module.css';
+import GDPRConsent from '../components/GDPRConsent/GDPRConsent.js';
 
-const Home = () => {
+function Home() {
   return (
     <div className={styles.container}>
       <Head>
@@ -25,7 +26,8 @@ const Home = () => {
           Are you tired of worrying about the high cost of your monthly
           electrical bills? Our energy calculator app is here to help! Our app
           allows you to easily track and compare the energy consumption of your
-          household devices{" "}
+          household devices
+          {' '}
           <Link href="/compare">
             <a className={styles.link_in_text}>Compare device</a>
           </Link>
@@ -39,10 +41,11 @@ const Home = () => {
             <a className={styles.link_in_text}>
               &nbsp;Calculate electricity consumption
             </a>
-          </Link>{" "}
+          </Link>
+          {' '}
           Don't let high energy costs stress you out any longer. Try our energy
           calculator app today and start saving money on your monthly bills!
-          <code className={styles.code}></code>
+          <code className={styles.code} />
         </p>
 
         <div className={styles.grid}>
@@ -51,6 +54,6 @@ const Home = () => {
       </main>
     </div>
   );
-};
+}
 
 export default Home;
