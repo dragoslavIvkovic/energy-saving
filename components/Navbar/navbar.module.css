@@ -1,23 +1,17 @@
-
-
-
-.navbar{
-    display: flex;
-align-items: center;
-justify-content: center;
- background-color: #004953;   
-   
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #004953;
 }
 
-.navbar a{
-    padding: 1vw;
-    margin-bottom: 3vh;
-    /* color: blanchedalmond; */
-    text-decoration: none;
+.navbar a {
+  padding: 1vw;
+  margin-bottom: 3vh;
+  /* color: blanchedalmond; */
+  text-decoration: none;
 }
-.navbar a:hover{
-    
-    background-color: #07343a;
-    padding: 5px;
+.navbar a:hover {
+  background-color: #07343a;
+  padding: 5px;
 }
-

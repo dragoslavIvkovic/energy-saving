@@ -1,24 +1,25 @@
-import styles from "./Contact.module.css";
-import { useState } from "react";
+/* eslint-disable no-unused-vars */
+import { useState } from 'react';
+import styles from './Contact.module.css';
 
 export default function About() {
   const [submitted, setSubmitted] = useState(false);
 
   const Userdata = async (event) => {
     event.preventDefault();
-    console.log("Sending");
+    console.log('Sending');
     setSubmitted(true);
 
-    let userdata = {
+    const userdata = {
       Name: event.target.Name.value,
       Email: event.target.Email.value,
       Message: event.target.Message.value,
     };
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
+    const res = await fetch('/api/contact', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(userdata),
     });
@@ -51,11 +52,10 @@ export default function About() {
         name="Message"
         id="Message"
         required
-      ></textarea>
+      />
 
       <button type="submit">Send</button>
-      {submitted == true ? alert("Thank you for your message") : ""}
+      {submitted === true ? alert('Thank you for your message') : ''}
     </form>
   );
 }
-

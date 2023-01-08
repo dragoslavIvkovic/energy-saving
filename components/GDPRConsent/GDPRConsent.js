@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import styles from "./GDPR.module.css";
+import React, { useState } from 'react';
+import styles from './GDPR.module.css';
 
-const GDPRConsent = () => {
+function GDPRConsent() {
   const [isConsentGiven, setIsConsentGiven] = useState(false);
 
   const handleConsent = () => {
@@ -19,12 +19,11 @@ const GDPRConsent = () => {
           provided to them or that they’ve collected from your use of their
           services.
         </p>
-        <button onClick={handleConsent}>I consent</button>
+        <button type="button" onClick={handleConsent}>I consent</button>
       </div>
     );
-  } else {
-    return null;
   }
-};
+  return null;
+}
 
 export default GDPRConsent;

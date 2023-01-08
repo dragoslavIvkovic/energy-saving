@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   BarChart,
   Bar,
@@ -7,9 +7,9 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-} from "recharts";
-import { useSelector } from "react-redux";
-import styles from "../../styles/Elements.module.css";
+} from 'recharts';
+import { useSelector } from 'react-redux';
+import styles from '../../styles/Elements.module.css';
 
 export default function Chart() {
   const listData = useSelector((state) => state.compare.list);

@@ -1,23 +1,22 @@
-
- 
-
+/* eslint-disable global-require */
+/* eslint-disable import/no-unresolved */
 export default async function (req, res) {
-    const nodemailer = require("nodemailer");
+  const nodemailer = require('nodemailer');
   const transporter = nodemailer.createTransport({
     port: 465,
-    host: "smtp.gmail.com",
+    host: 'smtp.gmail.com',
     auth: {
-        user: process.env.EMAIL,
-            pass: process.env.PASSWORD,
+      user: process.env.EMAIL,
+      pass: process.env.PASSWORD,
     },
     secure: true,
   });
 
   const mailData = {
-    from: "egriboz.mail@gmail.com",
+    from: 'egriboz.mail@gmail.com',
     to: `${process.env.EMAIL}`,
     subject: `[Power Saving] Message From ${req.body.name}`,
-    text: req.body.message + " | Sent from: " + req.body.email,
+    text: `${req.body.message} | Sent from: ${req.body.email}`,
     html: `<div style="border:1px solid #eceff1;padding: 30px;"><h1>Contact Form with Next.js and Nodemailer</h1><p>${req.body.message}</p><p style="padding: 30px 0 0 0;margin: 30px 0 0 0;border-top: 1px solid #eceff1;">Sent from: ${req.body.email}</p><p style="padding:30px 0 0 0;margin:30px 0 0 0;border-top:1px solid #eceff1"><img src="https://egriboz.com/raven.gif"></p></div>`,
   };
   // transporter.sendMail(mailData, function (err, info) {
@@ -29,18 +28,18 @@ export default async function (req, res) {
     // send mail
     transporter.sendMail(mailData, (err, info) => {
       if (err) {
-        console.error("err", err);
-        res.send("error" + JSON.stringify(err));
+        console.error('err', err);
+        res.send(`error${JSON.stringify(err)}`);
         reject(err);
       } else {
-        console.log("info", info);
+        console.log('info', info);
         resolve(info);
       }
     });
   });
 
   console.log(req.body);
-  res.send("success");
+  res.send('success');
 }
 
 // const nodemailer = require("nodemailer");

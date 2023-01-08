@@ -1,6 +1,6 @@
-import React from "react";
-import styles from "./navbar.module.css";
-import ActiveLink from "./ActiveLink";
+import React from 'react';
+import styles from './navbar.module.css';
+import ActiveLink from './ActiveLink';
 
 function Navbar() {
   return (

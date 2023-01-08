@@ -1,36 +1,32 @@
-import React  from "react"; 
-import * as XLSX from "xlsx"; 
-import { useSelector, useDispatch } from "react-redux";
-import { removeList } from "../../store/slice/calcSlice";
-import { MdDelete } from "react-icons/md";
- import styles from "../../styles/Elements.module.css";
-
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+import React from 'react';
+import * as XLSX from 'xlsx';
+import { useSelector, useDispatch } from 'react-redux';
+import { MdDelete } from 'react-icons/md';
+import { removeList } from '../../store/slice/calcSlice';
+import styles from '../../styles/Elements.module.css';
 
 export default function TableData() {
   const dispatch = useDispatch();
 
   const listData = useSelector((state) => state.calculation.list);
 
-  console.log(`⬇️ listData ⬇️`, listData)
-
   const downloadExcel = () => {
     const worksheet = XLSX.utils.json_to_sheet(listData);
     const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, "Sheet1");
-    //let buffer = XLSX.write(workbook, { bookType: "xlsx", type: "buffer" });
-    //XLSX.write(workbook, { bookType: "xlsx", type: "binary" });
-    XLSX.writeFile(workbook, "DataSheet.xlsx");
-  };
- 
-  const RemoveRow = (id) => {
-    return dispatch(removeList(id));
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet1');
+    // let buffer = XLSX.write(workbook, { bookType: "xlsx", type: "buffer" });
+    // XLSX.write(workbook, { bookType: "xlsx", type: "binary" });
+    XLSX.writeFile(workbook, 'DataSheet.xlsx');
   };
 
-  let isObjectEmpty = Object.keys(listData).length === 0;
+  const RemoveRow = (id) => dispatch(removeList(id));
+
+  const isObjectEmpty = Object.keys(listData).length === 0;
 
   return (
     <div className={styles.table}>
-      <button onClick={() => downloadExcel()}>Download Data</button>
+      <button type="button" onClick={() => downloadExcel()}>Download Data</button>
 
       {!isObjectEmpty && (
         <table>
@@ -60,7 +56,10 @@ export default function TableData() {
                 {/* <td>{row.priceSum}</td> */}
                 <td>{row.priceOfMonthlyConsumption}</td>
                 <td>{row.annualConsumptionPrice}</td>
-                <td onClick={() => RemoveRow(row.id)}>
+                <td
+                  onKeyDown={() => RemoveRow(row.id)}
+                  onClick={() => RemoveRow(row.id)}
+                >
                   <MdDelete />
                 </td>
               </tr>
