@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    width: 50vw;
+    align-items: center;
+    padding: 20px;
+    justify-items: center;background-color: #004953;
+}
+.container a{
+  text-decoration: none;
+  text-align: center;
+
+  font-weight: 800;
+  color:blanchedalmond;
+}
+.title {
+    margin-bottom: 2vh;
+  text-align: center;
+   
+}
+
+.description{
+     padding: 30px;
+     color: darksalmon;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+ 
+.link_in_text:hover{
+  color:var(--active-color)
+}

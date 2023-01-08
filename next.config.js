@@ -4,7 +4,7 @@ const nextConfig = {
   swcMinify: true,
   compiler: {
     // ssr and displayName are configured by default
-    styledComponents: true,
+    // styledComponents: true,
   },
 };
 

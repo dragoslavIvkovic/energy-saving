@@ -1,0 +1,34 @@
+ 
+
+.form {
+    background-color:#004953 ;
+ display: flex;
+flex-direction: column; 
+  align-items: center;
+  justify-items: center;
+}
+
+/* .nameForm{
+    width: max-content;
+} */
+
+.nameInput,.emailInput,.message{
+width: 100%;color: blanchedalmond;font-size: 0.9rem;
+margin-bottom: 2vh;
+}
+ .message:placeholder{
+ color: blanchedalmond;font-size: 1rem;
+font-weight: 800;
+}
+.nameInput:hover,.emailInput:hover,.message:hover{
+width: 100%;color: blanchedalmond;
+}
+ 
+.message{
+    height: 30vh;
+    background-color: #538b99;
+    color: blanchedalmond;
+    text-align: center;
+    font-size: 0.9rem;
+
+}

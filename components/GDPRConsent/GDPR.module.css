@@ -1,0 +1,18 @@
+.gdpr_container {
+  position: fixed;
+  margin-bottom: 1rem;
+  bottom: 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 10px;
+ 
+}
+
+
+.text {
+  
+  width: 50rem;
+}

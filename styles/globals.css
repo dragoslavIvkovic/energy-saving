@@ -1,11 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
+
 :root {
   --bg-color: #004953;
   --bg2-color: #14667a;
   --text-color: #fefefe;
+  --text3-color: blanchedalmond;
   --text2-color: #538b99;
   --disabled-color: #3c6671;
   --annotations-color: #f5a519;
   --active-color: #05b7fb;
+  --active-1: #A22C29;
+  --active-2: #d2e4c4;
+  --active-3: #e84855;
+  --active-4: #d1345b;
+  --text-shadow: 0.3px 0.3px 0.3px #021b1e;
 }
 
 * {
@@ -19,104 +27,117 @@ body {
   padding: 0;
   margin: 0;
   background: var(--bg-color);
-  font-size: calc(10px + 0.390625vw);;
+  font-size: calc(10px + 0.390625vw);
   overflow: hidden;
   scrollbar-width: none;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.MuiInputBase-root {
-  background: var(--bg2-color);
-  width: 7.5rem;
-}
-
-.MuiButton-root {
-  width: 7.5rem;
-  background: var(--annotations-color);
-}
-
-.MuiButton-root:hover {
-  background-color: var(--bg2-color);
- color: var(--annotations-color);
-}
-
-.MuiInputLabel-root {
-  color: var(--bg-color);
-}
-
-.MuiInputLabel-shrink {
-  color: var(--annotations-color);
-  margin-top: -10px;
-}
-
-.Mui-focused:hover {
-  background: var(--annotations-color);
-}
-
-.MuiSvgIcon-root {
-  color: var(--bg-color);
-  font-size: 1.5vw;
-}
-
-.MuiTabPanel-root {
-  margin-top: 2vh;
-  padding: 1vh 0;
-}
-
-.MuiTabs-flexContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.MuiDataGrid-root {
-  overflow: hidden;
-  color: #538b99;
-  border-color: #538b99;
-}
-
-.MuiButton-root {
-  color: var(--bg2-color);
-  background-color: var(--annotations-color);
-  font-weight: 700;
-}
-
-.MuiTooltip-tooltip {
-  background-color: var(--bg2-color);   
-  color: var(--bg-color);
-  font-size: medium;
-  font-weight: 700;
-  bottom:10px;
-  border: 1px solid var(--bg-color);
-  box-shadow: rgba(0, 0, 0, 0.16) 1px 2px 4px;
+  font-family: "Lato", sans-serif;
+  /* text-shadow: var(--text-shadow); */
 }
 
 table {
   width: 100%;
+  margin-top: 20px;
   background-color: var(--bg2-color);
   border: 1px solid var(--text2-color);
   border-radius: 5px;
 }
 th {
   color: var(--text2-color);
+  font-size: 0.8rem;
   text-transform: uppercase;
 }
 
 td {
   border: 1px solid var(--text2-color);
   padding: 5px;
+  font-size: 0.9rem;
   text-align: center;
 }
 
+input {
+  background: var(--bg2-color);
+  width: 20%;
+  height: 2rem;
+  border-radius: 6px;
+  border: 1px solid var(--text2-color);
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  color: var(--text3-color);
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+input:first-child {
+  color: var(--active-color);
+}
+input:nth-of-type(3) {
+  color: var(--active-color);
+}
+
+input:hover {
+  color: var(--text2-color);
+  background-color: var(--annotations-color);
+  font-weight: 700;
+}
+
+button {
+  width: 20%;
+  height: 2rem;
+  background: var(--annotations-color);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: var(--text3-color);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 800;
+  outline: 0;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+button:hover {
+  color: var(--annotations-color);
+  background-color: var(--bg2-color);
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #ff4742;
+}
+
+.button-24:active {
+  opacity: 0.5;
+}
 
 .footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color:var(--bg2-color);
-    
-   text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--bg2-color);
+  text-align: center;
 }
+
+label {
+  color: var(--bg2-color);
+  font-size: 1rem;
+  font-weight: 900;
+  margin: 10px;
+}
+
+/* input::placeholder {
+   text-align: center;
+} */
